@@ -41,3 +41,20 @@
 ### 🐳 Container & Infrastructure Security
 **Trivy Vulnerability Scanner**
 ![Trivy Scan Results](security/trivy/1.png)
+
+### Observability
+- By correlating logs and traces with the same Trace ID, we can navigate from a log entry directly to the full trace, inspect the request execution path, and identify performance bottlenecks across services.
+![Observability 1](observability/1.png)
+![Observability 2](observability/2.png)
+- A client request passing through the BFF service to the Blog service, completing successfully with a 200 OK response in 13.17 ms.
+![Observability 3](observability/3.png)
+- Similar idea with a more complex scenario.
+![Observability 5](observability/5.png)
+- Dashboard correlates metrics, traces, and logs, allowing us to follow a request across multiple services and inspect the related logs using the same Trace ID.
+![Observability 4](observability/4.png)
+- Querying OpenTelemetry span metrics to show the top API calls by service and endpoint traffic rate.
+![Observability 6](observability/6.png)
+- Tempo is querying distributed traces to show API request rates, latency (p90), and service relationships.
+![Observability 7](observability/7.png)
+- Grafana SRE Service Detail dashboard shows a service's traffic, API performance, and latency metrics using Prometheus and Tempo data.
+![Observability 8](observability/8.png)
